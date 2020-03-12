@@ -20,12 +20,13 @@ def speech_to_text(destination_language, source_language):
         print("Google Speech Recognition could not understand audio")
     except sr.RequestError as e:
         print("Could not request results from Google Speech Recognition service; {0}".format(e))
-    print(translator.translate(text, dest=destination_language, src=source_language))
-
+    result_text = translator.translate(text, dest=destination_language, src=source_language).text
+    return result_text
 
 destination_lang = languages.get_langcode('english')
 source_lang = languages.get_langcode('turkish')
-speech_to_text(destination_lang, source_lang)
+
+print(speech_to_text(destination_lang, source_lang))
 
 
 
