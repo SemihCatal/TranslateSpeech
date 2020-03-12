@@ -27,15 +27,3 @@ destination_lang = languages.get_langcode('english')
 source_lang = languages.get_langcode('turkish')
 
 print(speech_to_text(destination_lang, source_lang))
-
-
-
-
-
-
-
-
-
-
-
-
